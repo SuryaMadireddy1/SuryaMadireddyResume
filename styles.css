@@ -232,6 +232,77 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.project-item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.project-item p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.tech-stack li {
+    background-color: var(--section-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    color: var(--primary-color);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    transition: 0.3s;
+}
+
+.tech-stack li:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.project-links {
+    margin-top: 1rem;
+}
+
+.project-links .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.project-links .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+
 /* Skills */
 .skills-grid {
     display: grid;
