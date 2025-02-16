@@ -8,13 +8,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("https://u6g7y30ag0.execute-api.us-east-1.amazonaws.com/prod/visitor")
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("visitor-counter").textContent = `Visitors: ${data.visits}`;
-        })
-        .catch(error => console.error("Error fetching visitor count:", error));
+document.addEventListener("DOMContentLoaded",  async function () {
+    try {
+        const response = await fetch("https://u6g7y30ag0.execute-api.us-east-1.amazonaws.com/prod/visitor");
+        const data = await response.json();
+        document.getElementById("visitor-counter").textContent = `Visitors: ${data.visits}`;
+    } catch (error) {
+        console.error("Error fetching visitor count:", error);
+    }
 });
 
 
