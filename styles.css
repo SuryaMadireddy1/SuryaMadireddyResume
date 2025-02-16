@@ -26,6 +26,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background);
+    padding-top: 70px;
 }
 
 .container {
@@ -78,7 +79,7 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 10rem 0 6rem;
+    padding: 12rem 2rem 6rem;
     background: linear-gradient(135deg, var(--section-bg) 0%, #ffffff 100%);
     text-align: center;
     position: relative;
@@ -97,7 +98,7 @@ body {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -146,7 +147,7 @@ body {
 
 /* Sections */
 .section {
-    padding: 4rem 0;
+    padding: 5rem 0;
 }
 
 .section:nth-child(even) {
@@ -234,7 +235,7 @@ body {
 /* Skills */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 1rem;
 }
@@ -287,7 +288,7 @@ body {
 
 /* Contact Section */
 .contact-info {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     background: var(--background);
     padding: 2.5rem;

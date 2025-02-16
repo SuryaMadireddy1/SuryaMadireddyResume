@@ -8,6 +8,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("https://u6g7y30ag0.execute-api.us-east-1.amazonaws.com/prod/visitorcount")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("visitor-counter").textContent = `Visitors: ${data.visits}`;
+        })
+        .catch(error => console.error("Error fetching visitor count:", error));
+});
+
+
 // Add active class to navigation links based on scroll position
 window.addEventListener('scroll', () => {
     let current = '';
