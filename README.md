@@ -1,65 +1,116 @@
-# 📄 Surya Madireddy Resume
+# 🚀 Cloud Resume Challenge – Surya Madireddy
 
-🚀 Welcome to my **AWS Cloud Resume** repository! This project is part of the **Cloud Resume Challenge**, showcasing my **DevOps, Cloud, and Web Development** skills.
+Hi, I’m **Surya Madireddy**, a DevOps & Cloud Engineer with a passion for building secure, scalable, and automated cloud applications. This project is my implementation of the [Cloud Resume Challenge](https://cloudresumechallenge.dev), designed to showcase real-world skills in AWS, CI/CD, and frontend/backend integration.
 
----
-
-## 📌 Project Overview
-
-This repository contains:
-✅ A **static website** version of my resume  
-✅ Hosted on **Amazon S3** with **CloudFront for HTTPS**  
-✅ A **visitor counter** using **DynamoDB, API Gateway, and Lambda**  
-✅ Fully automated **CI/CD pipeline with GitHub Actions**  
+> ✅ Not just a resume — it’s a live, serverless cloud application.
 
 ---
 
-## 🔗 Live Resume
+## 🌐 Live Demo
 
-🌍 **View my Resume Online**: [SuryaMadireddyResume.com](https://drll8fml7ef5x.cloudfront.net)  
-
----
-
-## 📊 GitHub Stats & Insights
-
-[![GitHub contributors](https://img.shields.io/github/contributors/SuryaMadireddy1/SuryaMadireddyResume)](https://github.com/SuryaMadireddy1/SuryaMadireddyResume/graphs/contributors)
-[![GitHub stars](https://img.shields.io/github/stars/SuryaMadireddy1/SuryaMadireddyResume)](https://github.com/SuryaMadireddy1/SuryaMadireddyResume/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/SuryaMadireddy1/SuryaMadireddyResume)](https://github.com/SuryaMadireddy1/SuryaMadireddyResume/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/SuryaMadireddy1/SuryaMadireddyResume)](https://github.com/SuryaMadireddy1/SuryaMadireddyResume/issues)
+📎 **[https://surya.connectliftmate.com](https://surya.connectliftmate.com)**  
+*(Hosted on AWS S3 with CloudFront and deployed via GitHub Actions)*
 
 ---
 
-## 🛠️ Technologies Used
+## 🧰 Technologies Used
 
-- **Frontend:** HTML, CSS, JavaScript  
-- **Cloud Hosting:** AWS S3 + CloudFront (HTTPS)  
-- **Backend:** AWS Lambda (Python) + API Gateway  
-- **Database:** AWS DynamoDB (Visitor Counter)  
-- **CI/CD:** GitHub Actions (Automated Deployments)  
-
----
-
-## 🚀 Deployment Workflow
-
-1. **Frontend**: On push to `s3-deployment`, GitHub Actions updates S3 & invalidates CloudFront.  
-2. **Backend**: API updates are deployed automatically to AWS Lambda via GitHub Actions.  
-3. **Infrastructure as Code**: AWS resources are managed via **Terraform**/**AWS SAM**.  
+| Layer        | Tools & Services |
+|--------------|------------------|
+| Frontend     | HTML, CSS, JavaScript |
+| Hosting      | Amazon S3 + CloudFront |
+| API          | AWS API Gateway |
+| Backend      | AWS Lambda (Python) |
+| Database     | AWS DynamoDB |
+| CI/CD        | GitHub Actions |
 
 ---
 
-## 📢 How to Contribute
+## 🏗️ Project Architecture
 
-Want to improve this project? Feel free to:
-- Open an **issue** for suggestions or bug reports.
-- Submit a **pull request** if you have enhancements.
+This resume integrates a static frontend, serverless backend, and CI/CD automation using AWS services and GitHub.
+
+### 🌐 Static Website Hosting
+
+User ↓ CloudFront (CDN + HTTPS) ↓ S3 Bucket (Static Resume Files)
+
+
+- HTML, CSS, JS are hosted in an **S3 bucket**
+- Delivered globally and securely using **CloudFront**
+- Fully responsive and optimized for performance
+
+---
+
+### 🔁 Real-Time Visitor Counter (API)
+
+JavaScript fetch() ↓ API Gateway (Public Endpoint) ↓ AWS Lambda (Python) ↓ DynamoDB (Counter Storage) ↓ Returns Count → Injected into DOM
+
+
+- The visitor count is stored in **DynamoDB**
+- A **Python Lambda** reads and increments the value
+- **API Gateway** exposes the function via a REST endpoint
+- JavaScript fetches and renders it on page load
+
+---
+
+### ⚙️ CI/CD Pipeline – GitHub Actions
+
+Push to main branch ↓ GitHub Actions Workflow ↓ aws s3 sync → uploads to S3 ↓ aws cloudfront create-invalidation
+
+
+#### 🔄 `deploy.yml` Workflow
+
+- Trigger: Push to `main`
+- Steps:
+  - Checkout repo
+  - Configure AWS credentials via GitHub Secrets
+  - Deploy to S3 (excluding `.git`, `.DS_Store`, etc.)
+  - Invalidate CloudFront cache for real-time updates
+
+---
+
+## ✨ Frontend Features (script.js)
+
+- Smooth scroll for anchor links
+- Section highlight on scroll (scroll spy)
+- Sticky navbar style change on scroll
+- Dark mode toggle (with localStorage support)
+- Animated back-to-top button
+- Dynamic visitor count via `fetch`
+
+---
+
+## 🎨 Styling Highlights (styles.css)
+
+- Modern layout with **CSS Grid** & **Flexbox**
+- Color theming using **CSS variables**
+- Light/Dark mode with smooth transitions
+- Hover states, animation (`pulse`), and shadows
+
+---
+
+## 🧠 Key Learnings
+
+- Infrastructure as Code mindset using AWS-native services
+- Real-world deployment workflows via GitHub Actions
+- Serverless backend design with API Gateway + Lambda + DynamoDB
+- Building responsive, dynamic UIs without frameworks
 
 ---
 
 ## 📬 Contact
 
-📧 **Email:** [msvpavanreddy@gmail.com](mailto:msvpavanreddy@gmail.com)  
-💼 **LinkedIn:** [linkedin.com/in/surya-m0299](https://www.linkedin.com/in/surya-m0299/)  
+📧 Email: [msvpavanreddy@gmail.com](mailto:msvpavanreddy@gmail.com)  
+💼 LinkedIn: [linkedin.com/in/surya-m0299](https://linkedin.com/in/surya-m0299)  
+💻 GitHub: [SuryaMadireddy1](https://github.com/SuryaMadireddy1)
 
 ---
 
-🚀 **Thank you for visiting!** Hope you find this project useful. Let me know if you have any suggestions! 🎯
+> “Your resume shouldn’t just talk about your skills — it should run them.”  
+> — Surya Madireddy
+
+---
+
+## 🙌 Thank You!
+
+Thanks for visiting my project. If it helped or inspired you, feel free to ⭐ the repo or connect on LinkedIn. Let’s build something awesome together 🚀
