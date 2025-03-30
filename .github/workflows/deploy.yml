@@ -20,19 +20,14 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Deploy to S3
+      - name: Deploy Website to S3
         run: |
-          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete \
-            --exclude ".git/*" \
-            --exclude ".github/*" \
-            --exclude ".gitignore" \
-            --exclude ".DS_Store" \
-            --exclude "README.md"
-      - name: Upload deploy.json with timestamp
+          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete
+
+      - name: Save Deployment Timestamp
         run: |
           echo "{\"timestamp\": \"$(date -u +"%Y-%m-%d %H:%M UTC")\"}" > deploy.json
-          aws s3 cp deploy.json s3://${{ secrets.S3_BUCKET_NAME }}/deploy.json --acl public-read
-
+          aws s3 cp deploy.json s3://${{ secrets.S3_BUCKET_NAME }}/deploy.json
 
       - name: Invalidate CloudFront Cache
         run: |
