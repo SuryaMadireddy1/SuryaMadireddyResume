@@ -28,6 +28,11 @@ jobs:
             --exclude ".gitignore" \
             --exclude ".DS_Store" \
             --exclude "README.md"
+      - name: Upload deploy.json with timestamp
+        run: |
+          echo "{\"timestamp\": \"$(date -u +"%Y-%m-%d %H:%M UTC")\"}" > deploy.json
+          aws s3 cp deploy.json s3://${{ secrets.S3_BUCKET_NAME }}/deploy.json --acl public-read
+
 
       - name: Invalidate CloudFront Cache
         run: |
