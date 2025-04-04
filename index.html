@@ -1,64 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Surya Madireddy - DevSecOps Engineer with expertise in DevOps, Cloud Engineering, and System Administration. View my Cloud Resume online.">
-    <meta name="keywords" content="Surya Madireddy, DevOps, Cloud Engineer, AWS, SRE, DevSecOps, Site Reliability Engineer, Resume">
-    <meta name="author" content="Surya Madireddy">
-    <meta property="og:title" content="Surya Madireddy - Cloud Resume">
-    <meta property="og:description" content="Explore my Cloud Resume, built using AWS services including S3, CloudFront, and DynamoDB.">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>Surya Madireddy - DevOps Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Surya Madireddy - DevOps Engineer with expertise in cloud automation, infrastructure, and CI/CD pipelines. View my cloud resume powered by AWS." />
+  <meta name="keywords" content="Surya Madireddy, DevOps Portfolio, Cloud Resume, AWS, CI/CD, GitHub Actions, CloudFront, S3" />
+  <meta name="author" content="Surya Madireddy" />
+  <meta property="og:title" content="Surya Madireddy - DevOps Portfolio" />
+  <meta property="og:description" content="A modern, cloud-native resume built with AWS S3, CloudFront, Lambda, and GitHub Actions." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Surya Madireddy - DevOps Engineer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="#home" class="logo">Surya Madireddy</a>
-                <ul class="nav-links">
-                    <li><a href="#about">Profile</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-        <button id="theme-toggle" class="theme-toggle-btn">
-            <i class="fas fa-moon"></i>
-        </button> 
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <a href="#home" class="logo">Surya Madireddy</a>
+        <ul class="nav-links">
+          <li><a href="#about">Profile</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Dark Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger"></button>
+      </div>
     </div>
-</div>
+  </nav>
 
-    </nav>
-    <header id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Surya Madireddy</h1>
-                <h2>DevOps Engineer</h2>
-                <p class="tagline">DevOps & Cloud Engineer | AWS | GCP | Kubernetes | Terraform | CI/CD | Cloud Security | Docker | AppSec | Automation Expert</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/surya-m0299/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/SuryaMadireddy1" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:msvpavanreddy@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:848-500-8933"><i class="fas fa-phone"></i></a>                    
-                </div>
-            </div>
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Surya Madireddy</h1>
+<h2 class="tagline-heading">Cloud DevOps Engineer</h2>
+<p class="tagline">
+  I turn manual deployments into zero-downtime CI/CD pipelines.  
+  Passionate about automating, monitoring, and scaling infra with AWS, GitHub Actions, and Terraform.
+</p>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/surya-m0299/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/SuryaMadireddy1" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:msvpavanreddy@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="tel:848-500-8933"><i class="fas fa-phone"></i></a>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
+    
     <main>
         <section id="about" class="section">
             <div class="container">
-                <h2 class="section-title">Profile</h2>
-                <p class="about-text">
-                    I'm a Cloud DevOps Engineer who builds scalable, secure, and automated systems — powered by AWS, GCP, Terraform, and CI/CD pipelines.
-
-                    With a strong DevSecOps mindset and a passion for clean automation, I love turning complex infrastructure into simple, maintainable code.                </p>
+              <h2 class="section-title">About Me</h2>
+              <div class="about-wrapper">
+                <div class="about-text">
+                  <p class="quote">"If I can automate it, I will."</p>
+                  <p>
+                    I’m Surya — a DevOps Engineer obsessed with shipping fast, scaling smart, and automating everything that moves. Whether it’s deploying full-stack apps via CI/CD, building secure infrastructure with Terraform, or tracking uptime like a hawk — I’m all in.
+                  </p>
+                  <p>
+                    My mantra? Keep it clean. Keep it scalable. Make it fail-proof.
+                  </p>
+                  <p>
+                    I’ve built pipelines for production-grade apps, worked across AWS/GCP/Azure, and thrive in high-responsibility environments where things break — and I fix them.
+                  </p>
+                  <p class="tagline-emoji">🚀 Let’s build cloud systems that don’t just work, but wow.</p>
+                </div>
+              </div>
             </div>
-        </section>
+          </section>
+          
         <section id="experience" class="section">
             <div class="container">
                 <h2 class="section-title">Experience</h2>
@@ -119,31 +137,34 @@
 
         <section id="projects" class="section">
             <div class="container">
-                <h2 class="section-title">Projects</h2>
-                <div class="project-grid">
-        
-                    <div class="project-item">
-                        <h3>AWS Cloud Resume</h3>
-                        <p>
-                            A serverless, full-stack cloud resume hosted on AWS, featuring a real-time visitor counter and automated CI/CD pipeline. This project showcases hands-on expertise in AWS services, infrastructure as code (IaC), and secure deployment strategies.
-                        </p>
-                        <ul class="tech-stack">
-                            <li>AWS S3</li>
-                            <li>CloudFront</li>
-                            <li>API Gateway</li>
-                            <li>Lambda (Python)</li>
-                            <li>DynamoDB</li>
-                            <li>GitHub Actions</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://surya.connectliftmate.com/" target="_blank" class="btn">Live Demo</a>
-                            <a href="https://github.com/SuryaMadireddy1/SuryaMadireddyResume" target="_blank" class="btn">GitHub Repo</a>
-                        </div>
-                    </div>        
+              <h2 class="section-title">Projects</h2>
+              <div class="project-grid">
+          
+                <div class="project-item">
+                  <h3>AWS Cloud Resume Challenge</h3>
+                  <p>
+                    A full-stack, serverless portfolio hosted on AWS. This resume isn't just a resume — it's a working showcase of my DevOps, CI/CD, and cloud automation skills.
+                  </p>
+                  <ul class="tech-stack">
+                    <li><i class="fab fa-aws"></i> S3</li>
+                    <li><i class="fas fa-cloud"></i> CloudFront</li>
+                    <li><i class="fas fa-plug"></i> Lambda</li>
+                    <li><i class="fas fa-database"></i> DynamoDB</li>
+                    <li><i class="fab fa-github"></i> GitHub Actions</li>
+                    <li><i class="fas fa-code"></i> HTML/CSS/JS</li>
+                  </ul>
+                  <div class="project-links">
+                    <a href="https://surya.connectliftmate.com" target="_blank" class="btn">🌐 Live Demo</a>
+                    <a href="https://github.com/SuryaMadireddy1/SuryaMadireddyResume" target="_blank" class="btn">🔗 GitHub</a>
+                  </div>
                 </div>
+          
+                <!-- Add more projects here if you want -->
+          
+              </div>
             </div>
-        </section>
-        
+          </section>
+            
         <section id="skills" class="section">
             <div class="container">
                 <h2 class="section-title">Skills</h2>
@@ -198,19 +219,40 @@
                 </div>
             </div>
         </section>
+        <section class="section" id="dashboard">
+            <div class="container">
+              <h2 class="section-title">Live DevOps Dashboard</h2>
+              <div class="devops-widget">
+                <div class="devops-card">
+                  <h3>📦 Last Deployment</h3>
+                  <p id="last-deploy">Loading...</p>
+                </div>
+                <div class="devops-card">
+                  <h3>🌍 Total Visitors</h3>
+                  <p id="total-visits">Loading...</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
         <button id="scrollTop" title="Back to Top">↑</button>
 
     </main>
 
     <footer>
-        <div class="container">
-          <p>&copy; 2025 Surya Madireddy. All rights reserved.</p>
-          <div class="visitor-count">
-            <span class="loader"></span>
-            <span id="visitor-counter">Visitors: 343</span>
-          </div>
+        <div class="container terminal-footer">
+          <pre class="terminal-output">
+      surya@cloud-resume:~$ git push production
+      ✔️  Deploying with GitHub Actions...
+      ✔️  S3 sync completed
+      ✔️  CloudFront cache invalidated
+      ✔️  deploy.json updated
+      🟢  Site live at: https://surya.connectliftmate.com
+          </pre>
+          <p class="powered-by">© 2025 Surya Madireddy</p>
         </div>
-      </footer>      
+      </footer>
+         
 
     <script src="script.js"></script>
 </body>
