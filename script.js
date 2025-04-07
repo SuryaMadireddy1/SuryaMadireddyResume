@@ -11,9 +11,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     const noCache = `?t=${Date.now()}`; // Avoid CloudFront cache
     const res = await fetch(`https://u6g7y30ag0.execute-api.us-east-1.amazonaws.com/prod/visitor${noCache}`);
+    if (!res.ok) throw new Error(`Status: ${res.status}`);
     const data = await res.json();
     const el = document.getElementById("total-visits");
-    if (el && data.visitor_count !== undefined) {
+    if (el && typeof data.visitor_count === "number") {
       el.textContent = data.visitor_count;
     } else {
       el.textContent = "Unavailable";
