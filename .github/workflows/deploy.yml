@@ -24,9 +24,10 @@ jobs:
         run: |
           aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete
 
-      - name: Save Deployment Timestamp
+      - name: Save Deployment Timestamp in EST
         run: |
-          echo "{\"timestamp\": \"$(date -u +"%Y-%m-%d %H:%M UTC")\"}" > deploy.json
+          export TZ="America/New_York"
+          echo "{\"timestamp\": \"$(date +'%Y-%m-%d %I:%M %p %Z')\"}" > deploy.json
           aws s3 cp deploy.json s3://${{ secrets.S3_BUCKET_NAME }}/deploy.json
 
       - name: Invalidate CloudFront Cache
